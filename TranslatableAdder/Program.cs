@@ -1,4 +1,4 @@
-﻿using MVVMFramework.Localization;
+﻿using MVVMFrameworkNet472.Localization;
 using System;
 
 namespace TranslatableAdder

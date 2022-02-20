@@ -1,6 +1,6 @@
 ﻿using System.Windows;
-using MVVMFramework.Localization;
-using MVVMFramework.Views;
+using MVVMFrameworkNet472.Localization;
+using MVVMFrameworkNet472.Views;
 
 namespace TestApp
 {
