@@ -1,8 +1,8 @@
-﻿using MVVMFrameworkNet472.ViewNavigator;
+﻿using MVVMFramework.ViewNavigator;
 using System;
 using System.Collections.ObjectModel;
-using MVVMFrameworkNet472.Localization;
-using MVVMFrameworkNet472.ViewModels;
+using MVVMFramework.Localization;
+using MVVMFramework.ViewModels;
 
 namespace TestApp.ViewModels
 {

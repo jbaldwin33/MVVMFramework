@@ -13,10 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MVVMFrameworkNet472.Controls;
-using MVVMFrameworkNet472.ViewModels;
-using MVVMFrameworkNet472.ViewNavigator;
-using MVVMFrameworkNet472.Views;
+using MVVMFramework.Controls;
+using MVVMFramework.ViewModels;
+using MVVMFramework.ViewNavigator;
+using MVVMFramework.Views;
 
 namespace TestApp
 {

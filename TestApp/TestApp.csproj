@@ -1,36 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <OutputType>WinExe</OutputType>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
-    <UseWPF>true</UseWPF>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<OutputType>WinExe</OutputType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="ControlzEx">
-      <HintPath>..\DLLs\ControlzEx.dll</HintPath>
-    </Reference>
-    <Reference Include="MahApps.Metro.IconPacks.Core">
-      <HintPath>..\DLLs\MahApps.Metro.IconPacks.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="MahApps.Metro.IconPacks.Material">
-      <HintPath>..\DLLs\MahApps.Metro.IconPacks.Material.dll</HintPath>
-    </Reference>
-    <Reference Include="MahApps.Metro.IconPacks.RemixIcon">
-      <HintPath>..\DLLs\MahApps.Metro.IconPacks.RemixIcon.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Xaml.Behaviors">
-      <HintPath>..\DLLs\Microsoft.Xaml.Behaviors.dll</HintPath>
-    </Reference>
-    <Reference Include="MVVMFrameworkNet472">
-      <HintPath>..\MVVMFrameworkNet472\bin\Debug\MVVMFrameworkNet472.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="ControlzEx">
+			<HintPath>..\DLLs\ControlzEx.dll</HintPath>
+		</Reference>
+		<Reference Include="MahApps.Metro.IconPacks.Core">
+			<HintPath>..\DLLs\MahApps.Metro.IconPacks.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="MahApps.Metro.IconPacks.Material">
+			<HintPath>..\DLLs\MahApps.Metro.IconPacks.Material.dll</HintPath>
+		</Reference>
+		<Reference Include="MahApps.Metro.IconPacks.RemixIcon">
+			<HintPath>..\DLLs\MahApps.Metro.IconPacks.RemixIcon.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.Xaml.Behaviors">
+			<HintPath>..\DLLs\Microsoft.Xaml.Behaviors.dll</HintPath>
+		</Reference>
+		<Reference Include="MVVMFramework">
+			<HintPath>..\MVVMFrameworkNet472\bin\Debug\MVVMFramework.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>

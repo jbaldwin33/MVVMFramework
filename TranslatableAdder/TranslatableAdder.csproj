@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="MVVMFrameworkNet472">
-      <HintPath>..\MVVMFrameworkNet472\bin\Debug\MVVMFrameworkNet472.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="MVVMFramework">
+			<HintPath>..\MVVMFrameworkNet472\bin\Debug\MVVMFramework.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>
