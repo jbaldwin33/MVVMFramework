@@ -30,7 +30,7 @@
 			<HintPath>..\DLLs\Microsoft.Xaml.Behaviors.dll</HintPath>
 		</Reference>
 		<Reference Include="MVVMFramework">
-			<HintPath>..\MVVMFrameworkNet472\bin\Debug\MVVMFramework.dll</HintPath>
+		  <HintPath>..\MVVMFramework\bin\Debug\MVVMFramework.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>

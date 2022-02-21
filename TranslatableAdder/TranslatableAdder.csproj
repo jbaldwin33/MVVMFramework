@@ -5,8 +5,8 @@
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
-		<Reference Include="MVVMFramework">
-			<HintPath>..\MVVMFrameworkNet472\bin\Debug\MVVMFramework.dll</HintPath>
-		</Reference>
+	  <Reference Include="MVVMFramework">
+	    <HintPath>..\MVVMFramework\bin\Debug\MVVMFramework.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 </Project>
