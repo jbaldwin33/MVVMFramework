@@ -122,7 +122,13 @@
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y "$(OutputDir)MVVMFramework.dll" "$(SolutionDir)..\VideoEditor\DLLs"
 if not exist "$(SolutionDir)..\VideoEditor\DLLs\Localization" mkdir "$(SolutionDir)..\VideoEditor\DLLs\Localization"
-xcopy /Y "$(OutputDir)Localization\*" "$(SolutionDir)..\VideoEditor\DLLs\Localization"
-xcopy /Y "$(OutputDir)MVVMFramework.dll" "$(SolutionDir)..\Pokedex\assemblies"</PostBuildEvent>
+xcopy /Y "$(SolutionDir)DLLs\Localization\*" "$(SolutionDir)..\VideoEditor\DLLs\Localization"
+if not exist "$(SolutionDir)TestApp\bin\Debug\Localization" mkdir "$(SolutionDir)TestApp\bin\Debug\Localization"
+xcopy /Y "$(SolutionDir)DLLs\Localization\*" "$(SolutionDir)TestApp\bin\Debug\Localization"
+xcopy /Y "$(OutputDir)MVVMFramework.dll" "$(SolutionDir)..\Pokedex\assemblies"
+if not exist "$(SolutionDir)..\NewBank\DLLs\Localization" mkdir "$(SolutionDir)..\NewBank\DLLs\Localization"
+xcopy /Y "$(SolutionDir)DLLs\Localization\*" "$(SolutionDir)..\NewBank\DLLs\Localization"
+if not exist "$(SolutionDir)..\NewBankClient\DLLs\Localization" mkdir "$(SolutionDir)..\NewBankClient\DLLs\Localization"
+xcopy /Y "$(SolutionDir)DLLs\Localization\*" "$(SolutionDir)..\NewBankClient\DLLs\Localization"</PostBuildEvent>
   </PropertyGroup>
 </Project>

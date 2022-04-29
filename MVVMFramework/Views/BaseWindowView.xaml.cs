@@ -15,7 +15,7 @@ namespace MVVMFramework.Views
     /// </summary>
     public partial class BaseWindowView : ViewBaseWindow
     {
-        public BaseWindowView((Type, string, bool)[] viewModelTypes) : base(new MainViewModel(Navigator.Instance))
+        public BaseWindowView((ViewModel, bool)[] viewModelTypes) : base(new MainViewModel(Navigator.Instance))
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             if (viewModelTypes == null || viewModelTypes.Length == 0)
@@ -23,17 +23,16 @@ namespace MVVMFramework.Views
 
             InitializeComponent();
             Navigator.Instance.NavigationBar = navigationBar;
-            foreach (var (type, name, show) in viewModelTypes)
+            foreach (var (vm, show) in viewModelTypes)
             {
-                var instance = (ViewModel)Activator.CreateInstance(type);
                 if (Navigator.Instance.CurrentViewModel == null)
-                    Navigator.Instance.CurrentViewModel = instance;
+                    Navigator.Instance.CurrentViewModel = vm;
 
-                Navigator.Instance.ViewModels.Add(instance);
+                Navigator.Instance.ViewModels.Add(vm);
                 var button = new DefaultButton
                 {
-                    CommandParameter = instance,
-                    Content = name,
+                    CommandParameter = vm,
+                    Content = vm.Name,
                     Command = Navigator.Instance.UpdateCurrentViewModelCommand,
                 };
                 var binding = new Binding("IsShown")
@@ -41,7 +40,7 @@ namespace MVVMFramework.Views
                     Mode = BindingMode.TwoWay,
                     UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged,
                     Converter = new InverseBooleanConverter(),
-                    Source = Navigator.Instance.ViewModels.FirstOrDefault(vm => vm.GetType() == type)
+                    Source = Navigator.Instance.ViewModels.FirstOrDefault(viewModel => viewModel.GetType() == vm.GetType())
                 };
 
                 button.SetBinding(IsEnabledProperty, binding);

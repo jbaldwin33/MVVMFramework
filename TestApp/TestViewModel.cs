@@ -19,7 +19,7 @@ namespace TestApp
 {
     public class TestViewModel : ViewModel
     {
-        public static string Title => "Test";
+        public override string Name => "Test";
         private int myVar;
 
         public int MyProperty

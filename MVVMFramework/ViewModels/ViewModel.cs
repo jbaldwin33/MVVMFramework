@@ -7,6 +7,7 @@ namespace MVVMFramework.ViewModels
 {
     public abstract class ViewModel : INotifyPropertyChanged
     {
+        public virtual string Name { get; }
         public event PropertyChangedEventHandler PropertyChanged;
         public event EventHandler<MessageBoxEventArgs> ShowMessageBoxEventHandler;
         private bool isShown;

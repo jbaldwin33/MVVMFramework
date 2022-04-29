@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using MVVMFramework.Localization;
+using MVVMFramework.ViewModels;
 using MVVMFramework.Views;
 
 namespace TestApp
@@ -12,13 +13,13 @@ namespace TestApp
         protected override void OnStartup(StartupEventArgs e)
         {
             //TranslatableClass.Instance.CurrentCultureInfo = CultureInfo.GetCultureInfo("ja-JP");
-            var types = new[]
+            var types = new(ViewModel, bool)[]
             {
-                (typeof(TestViewModel), "Change Speed", true),
-                (typeof(TestViewModel), "Change Speed", true),
-                (typeof(TestViewModel), "Change Speed", true),
-                (typeof(TestViewModel), "Change Speed", true),
-                (typeof(TestViewModel), new SplitterTranslatable(), true),
+                (new TestViewModel(), true),
+                (new TestViewModel(), true),
+                (new TestViewModel(), true),
+                (new TestViewModel(), true),
+                (new TestViewModel(), true),
             };
             var window = new BaseWindowView(types)
             {
